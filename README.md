@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 - Java 8 or higher
-- Gradle
+- Gradle 6.5 or higher (optional)
 
 ### Installing
 
@@ -21,14 +21,30 @@ These instructions will get you a copy of the project up and running on your loc
 
    ```cd search-job```
 
-3. Build the project
+3. Build the project using Gradle
 
     ```./gradlew build```
+    
 
-4. Run the app
+Alternatively, you can build the project using the java command:
 
-    ```./gradlew run --args="-q [query] -key [api_key]"```
+    javac com/alpi/jobsearch/*.java
 
+### Usage
+
+To use the app, navigate to the com.alpi.jobsearch directory and run the java command with the following arguments:
+
+```java Main -q [query] -key [API key]```
+
+Where [query] is the job position you want to search for and [API key] is your API key for the Google Jobs API.
+
+For example:
+
+```java Main -q "java developer" -key "1234567890abcdef"```
+
+You can also use the -h flag to display the usage message:
+
+```java Main -h```
 
 ## Built With
 
